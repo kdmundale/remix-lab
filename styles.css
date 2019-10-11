@@ -15,49 +15,49 @@ header{
 }
 .topbar {
   align-items: center;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(0, 0, 0, .5);
   display: flex;
   flex-direction: row;
-  height: 4em;
+  height: 9em;
   justify-content: space-between;
+  width: 100%;
 }
 .icons {
   display:flex;
   flex-direction: row;
-  margin-left: 4em;
-  width: 35%;
 }
 .cityicon {
-  padding: 1em 0 1em .5em;
-}
-.nav1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 65%;
+  padding: .5em 0 .5em 2em;
+  height: 9em;
 }
 .searchTerm {
   height: 25px;
-  position: relative;
-  top: 3em;
   width: 14em;
 }
-ul {
-  list-style-type: none;
-
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  padding: 1em;
-}
 .mainbar {
-  background: none;
+  background-color: rgba(0, 0, 0, .5);
   display: flex;
+  align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 1em;
   width: 100%;
 }
+.mainbar > a {
+  color: aliceblue;
+  background: radial-gradient(rgb(3,23,58)55%,rgb(8,98,246));
+  border-radius: 50%;
+  text-decoration: none;
+  font-family: "Nunito";
+  font-style: italic;
+  margin: 0 .5em 0 .5em;
+  padding: 1em;
+}
+.mainbar > a:hover {
+  box-shadow: 0px 0px 20px 0px rgb(67,133,249);
+}
+
 .icon {
   height: 25px;
   margin: 1em;
@@ -70,6 +70,7 @@ ul {
 }
 
 main{
+  color: aliceblue;
   background: rgb(3,23,58);
   position: absolute;
   width: 100%;
@@ -81,12 +82,13 @@ main{
   justify-content: center;
   background-image: url(night.jpg);
   margin-top: 15em;
-  height: 30em;
+  height: 40em;
   width: 100%;
 }
 h1 {
   font-family: 'Lato';
-  font-size: 60px;
+  font-size: 80px;
+  margin-top: -2em;
   padding: 1em;
   text-align: center;
   text-shadow: 0 0 10px rgb(88,182,232), 0 0 20px rgb(88,182,232), 0 0 30px rgb(88,182,232), 0 0 40px rgb(219,76,63), 0 0 70px rgb(219,76,63), 0 0 80px rgb(219,76,63);
@@ -137,12 +139,13 @@ p {
 }
 .council {
   padding: 1em;
-  box-shadow: 3px 3px 9px 2px rgb(67,133,249);
+  box-shadow: 0px 0px 9px 0px rgb(67,133,249);
 }
 
 .council-meetings {
-  box-shadow: 3px 3px 9px 2px rgb(67,133,249);
+  box-shadow: 0px 0px 9px 0px rgb(67,133,249);
   padding: 1em;
+  width: 100%;
 }
 
 .work {
@@ -154,21 +157,20 @@ p {
 }
 .work > a {
   color: aliceblue;
-  box-shadow: 3px 3px 9px 2px rgb(67,133,249);
   border-radius: 45%;
   font-family: 'Lato';
   font-weight: bold;
   font-size: 24px;
   margin: .5em;
-  padding: 3em 1em 3em 1em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
 }
 .work > a:hover {
-  color: rgb(3,23,58);
-  background-color: rgba(67,133,249,.75);
+  color: lightblue;
+  background: radial-gradient(rgb(3,23,58) 30%, rgba(67,133,249,.75)) ;
+  box-shadow: 0px 0px 20px 0px rgb(67,133,249);
+
 }
 
 .ourwork {
@@ -178,13 +180,17 @@ p {
 }
 
 .red-button {
-  background: red;
+  background: darkblue;
+  border-radius: 40%;
+  box-shadow: 0px 0px 5px 2px rgb(67,133,249);
   color: white;
   font-family: 'Lato';
+  font-style: italic;
   font-weight: bold;
   line-height: 6em;
   text-decoration: none;
-  text-transform: uppercase;
+  text-shadow: 0 0 7px rgb(88,182,232), 0 0 13px rgb(88,182,232), 0 0 20px rgb(88,182,232), 0 0 25px rgb(219,76,63), 0 0 50px rgb(219,76,63), 0 0 60px rgb(219,76,63);
+  text-transform: full-width;
   padding: .5em 1.5em .5em 1.5em;
 }
 
@@ -258,10 +264,24 @@ h5 {
 @media screen and (min-width: 767px) {
   .work > a {
     margin: 1em;
-    height: 230px;
-    width: 250px;
+    font-size: 20px;
+    height: 100px;
+    text-align: center;
+    width: 100%;
   }
-
+.ct {
+  display: flex;
+  flex-direction: row;
+}
+.counciltop {
+  width: 70%;
+}
+.ourwork {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 4em;
+}
   .membrs {
     display: flex;
     flex-direction: row;
@@ -288,14 +308,10 @@ h5 {
 }
 @media screen and (min-width: 1030px) {
   .counciltop {
-    flex-direction: row;
+    flex-direction: column;
     margin: 4em;
   }
-  .council-meetings {
-    width: 30%;
-  }
-  .council {
-    width: 60%;
+
   }
   .work > a {
     padding-left: 1.5em;
